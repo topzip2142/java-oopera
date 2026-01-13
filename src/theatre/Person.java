@@ -11,8 +11,3 @@ public class Person {
         this.gender = gender;
     }
 }
-
-enum Gender {
-    MALE,
-    FEMALE
-}
