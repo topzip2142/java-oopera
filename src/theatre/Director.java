@@ -12,6 +12,6 @@ public class Director extends Person {
     public String toString() {
         return  "Director{" +
                 "name='" + name + "'" +
-                "surname=" + surname + "'";
+                ", surname=" + surname + "'}";
     }
 }
