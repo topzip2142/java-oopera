@@ -40,4 +40,9 @@ public class Actor extends Person {
                 Objects.equals(gender, anotherActor.gender) &&
                 Objects.equals(height, anotherActor.height);
     }
+
+    @Override
+    public String toString() {
+        return name + " " + surname + "(" + height + " см)";
+    }
 }
