@@ -10,12 +10,13 @@ public class Show {
     protected int duration;
     protected Director director;
     protected ArrayList<Actor> listOfActors;
-    protected static final String ERROR_NO_ACTORS = "В данном спектакле никто не участвует!";
+    protected static final String ERROR_NO_ACTORS = "В спектакле никто не участвует!";
 
     public Show(String title, int duration, Director director) {
         this.title = title;
         this.duration = duration;
         this.director = director;
+        this.listOfActors = new ArrayList<>();
     }
 
     public void printActors() {
@@ -24,7 +25,7 @@ public class Show {
             return;
         }
 
-        System.out.println("Список актёров, участвующих в спектакле:");
+        System.out.println("Список актёров, участвующих в спектакле '" + title + "':");
 
         for (Actor actor : listOfActors) {
             System.out.println(" " + actor);
@@ -32,19 +33,17 @@ public class Show {
     }
     
     public void addActor(Actor newActor) {
-        if (listOfActors.isEmpty()) {
-            listOfActors.add(newActor);
-        } else {
+        if (!listOfActors.isEmpty()) {
             for (Actor actor : listOfActors) {
                 if (actor.equals(newActor)) {
-                    System.out.println("Такой актёр уже участвует в спектакле!");
+                    System.out.println(actor + " уже участвует в спектакле '" + title + "'!");
                     return;
                 }
             }
-            
-            listOfActors.add(newActor);
-            System.out.println(newActor + " теперь участвует в спектакле");
         }
+            
+        listOfActors.add(newActor);
+        System.out.println(newActor + " теперь участвует в спектакле '" + title + "'");
     }
     
     public void changeActor(Actor newActor, String surnameToChange) {
@@ -54,18 +53,16 @@ public class Show {
         }
 
 
-        for (int i = 0; i < listOfActors.size(); i++) {
-            Actor actor = listOfActors.get(i);
+        for (int actorIndex = 0; actorIndex < listOfActors.size(); actorIndex++) {
+            Actor actor = listOfActors.get(actorIndex);
             if (actor.getSurname().equals(surnameToChange)) {
-                Actor oldActor = actor;
-                listOfActors.remove(i);
-                listOfActors.add(newActor);
+                listOfActors.set(actorIndex, newActor);
 
-                System.out.println(oldActor + "заменён на " + newActor);
+                System.out.println(actor + " заменён на " + newActor + " в спектакле '" + title + "'");
                 return;
             }
         }
 
-        System.out.println("Актёра с фамилией '" + surnameToChange + "' нет в данном спектакле");
+        System.out.println("Актёра с фамилией '" + surnameToChange + "' нет в спектакле '" + title + "'");
     }
 }
