@@ -40,6 +40,6 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return name + " " + surname + "(" + height + " см)";
+        return name + " " + surname + " (" + height + " см)";
     }
 }
