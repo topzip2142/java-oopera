@@ -4,8 +4,6 @@ import java.util.Objects;
 
 public class Actor extends Person {
     private final int height;
-    private static final int HASH_SIMPLE_NUMBER_ONE = 17;
-    private static final int HASH_SIMPLE_NUMBER_TWO = 31;
 
     public Actor(String name, String surname, Gender gender, int height) {
         super(name, surname, gender);
