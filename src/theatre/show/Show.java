@@ -1,4 +1,7 @@
-package theatre;
+package theatre.show;
+
+import theatre.staff.Actor;
+import theatre.staff.Director;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package theatre;
+package theatre.staff;
 
 
 public enum Gender {

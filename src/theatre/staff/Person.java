@@ -1,4 +1,4 @@
-package theatre;
+package theatre.staff;
 
 public class Person {
     protected String name;

@@ -1,4 +1,4 @@
-package theatre;
+package theatre.staff;
 
 public class Actor extends Person {
     private int height;
