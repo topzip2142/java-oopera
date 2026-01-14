@@ -21,8 +21,6 @@ public class Actor extends Person {
         hash = hash * HASH_SIMPLE_NUMBER_TWO;
         hash = hash + surname.hashCode();
         hash = hash * HASH_SIMPLE_NUMBER_TWO;
-        hash = hash + gender.hashCode();
-        hash = hash * HASH_SIMPLE_NUMBER_TWO;
         hash = hash + height;
 
         return hash;
@@ -37,7 +35,6 @@ public class Actor extends Person {
 
         return  Objects.equals(name, anotherActor.name) &&
                 Objects.equals(surname, anotherActor.surname) &&
-                Objects.equals(gender, anotherActor.gender) &&
                 Objects.equals(height, anotherActor.height);
     }
 
