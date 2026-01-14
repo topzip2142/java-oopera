@@ -53,25 +53,19 @@ public class Show {
             return;
         }
 
-        boolean isActorInShow = false;
-        for (Actor actor : listOfActors) {
+
+        for (int i = 0; i < listOfActors.size(); i++) {
+            Actor actor = listOfActors.get(i);
             if (actor.getSurname().equals(surnameToChange)) {
-                isActorInShow = true;
-                break;
+                Actor oldActor = actor;
+                listOfActors.remove(i);
+                listOfActors.add(newActor);
+
+                System.out.println(oldActor + "заменён на " + newActor);
+                return;
             }
         }
 
-        if (isActorInShow) {
-            for (int i = 0; i < listOfActors.size(); i++) {
-                Actor actor = listOfActors.get(i);
-                if (actor.getSurname().equals(surnameToChange)) {
-                    listOfActors.remove(i);
-                    listOfActors.add(newActor);
-                    break;
-                }
-            }
-        } else {
-            System.out.println("Актёра с фамилией '" + surnameToChange + "' нет в данном спектакле");
-        }
+        System.out.println("Актёра с фамилией '" + surnameToChange + "' нет в данном спектакле");
     }
 }
