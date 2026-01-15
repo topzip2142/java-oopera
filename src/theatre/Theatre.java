@@ -19,7 +19,7 @@ public class Theatre {
         String librettoOfBallet = "Она ищет себя в мире теней и воспоминаний; Он воплощает неумолимое время; "
                                 + "их дуэты — борьба и притяжение, а финальный танец с «серебряной нитью» "
                                 + "символизирует примирение души со временем и принятие прошлого.";
-        String librettoOfMusicalShow = "Лия мечтает о сцене, но её голос тонет в шуме «голосов»"
+        String librettoOfOpera = "Лия мечтает о сцене, но её голос тонет в шуме «голосов»"
                                      + "соцсетей; с помощью друга Макса и через противостояние"
                                      + " мистическому Эхо она находит силу в собственной искренности, "
                                      + " завершая шоу манифестом: «Мой голос — мой выбор», — при поддержке всех "
@@ -33,7 +33,7 @@ public class Theatre {
 
         Opera opera = new Opera("Громче, чем эхо!", 120,
                                 directorChusova, musicAuthorZimmer,
-                                librettoOfMusicalShow, 25);
+                                librettoOfOpera, 25);
 
         show.addActor(actorPetrov);
         show.addActor(actorPetrov);
