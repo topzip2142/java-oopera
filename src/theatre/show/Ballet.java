@@ -4,7 +4,7 @@ import theatre.staff.Director;
 import theatre.staff.Person;
 
 public class Ballet extends MusicalShow {
-    private Person choreographer;
+    private final Person choreographer;
 
     public Ballet(String title, int duration, Director director, Person musicAuthor,
                   String librettoText, Person choreographer) {
